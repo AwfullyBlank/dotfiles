@@ -114,12 +114,14 @@ default_border pixel 2
 
 ### swaybar
 bar {
+status_command i3blocks
 position bottom
+tray_output primary
 colors {
-statusline #ffffff 
+#statusline #ffffff 
 background #13131b00
-inactive_workspace #13131b00 #13131b00 #ffffffff
-active_workspace #3FC8B3 #3FC8B3 #ffffffff
-focused_workspace #4472Ca #4472Ca #ffffffff
+#inactive_workspace #13131b00 #13131b00 #ffffffff
+#active_workspace #3FC8B3 #3FC8B3 #ffffffff
+#focused_workspace #4472Ca #4472Ca #ffffffff
   }
 }

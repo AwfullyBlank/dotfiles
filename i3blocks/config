@@ -1,0 +1,14 @@
+[clock]
+command=date '+ %H:%M %D'
+interval=1
+color=#61afef
+
+[spacer-left]
+command=echo "												"
+interval=99999
+separator=false
+
+[battery]
+command=acpi | awk '{print "🔋 " $4 $5}'
+interval=30
+color=#98c379
