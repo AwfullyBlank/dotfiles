@@ -1,8 +1,9 @@
 [font]
-size = 12
+size = 14.0
+[font.normal]
+family = "JetBrainsMono Nerd Font"
 
 [colors.primary]
-#background = "#151515"  # Pure black
 background = "#13131b"  # Pure black
 foreground = "#DADADA"  # Soft white
 

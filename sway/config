@@ -7,8 +7,6 @@ set $term alacritty
 set $menu wofi --show drun 
 set $browser librewolf
 
-exec waybar
-
 exec env LANG=en_US.UTF-8 
 
 ### keyboard layout
@@ -103,8 +101,8 @@ mode "system" {
     bindsym m exec wpctl set-mute @DEFAULT_SINK@ toggle
     bindsym $up exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%+
     bindsym $down exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%-
-    bindsym down exec brightnessctl set 20%-
-    bindsym up exec brightnessctl set 20%+
+    bindsym down exec brightnessctl set 10%-
+    bindsym up exec brightnessctl set 10%+
     bindsym Escape mode "default"
 } 
 bindsym $mod+s mode "system"
@@ -118,10 +116,10 @@ status_command i3blocks
 position bottom
 tray_output primary
 colors {
-#statusline #ffffff 
+statusline #ffffff 
 background #13131b00
-#inactive_workspace #13131b00 #13131b00 #ffffffff
-#active_workspace #3FC8B3 #3FC8B3 #ffffffff
-#focused_workspace #4472Ca #4472Ca #ffffffff
+inactive_workspace #13131b00 #13131b00 #ffffffff
+active_workspace #3FC8B3 #3FC8B3 #ffffffff
+focused_workspace #4472Ca #4472Ca #ffffffff
   }
 }
