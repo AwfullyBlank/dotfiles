@@ -1,0 +1,85 @@
+
+// -*- mode: jsonc -*-
+{
+  "position": "bottom", // Waybar position (top|bottom|left|right)
+  //"height": 32, // Waybar height (remove for auto height)
+  "spacing": 5, // Gaps between modules
+
+  // Modules order
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "custom/date",
+    "custom/distro",
+    "clock"
+  ],
+  "modules-right": [
+    "network",
+    "power-profiles-daemon",
+    "battery"
+  ],
+
+  // Modules configuration
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "active": "",
+      "default": "",
+      "empty": ""
+    },
+    "persistent-workspaces": {
+      "*": [1, 2, 3, 4, 5]
+    }
+  },
+
+  "custom/date": {
+    "exec": "date +'%a %d %b'",
+    "interval": 60,
+    "format": " {}",
+    "tooltip": false
+  },
+
+  "custom/distro": {
+    "format": "  ",
+    "tooltip": false,
+  },
+
+  "clock": {
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "{:%y-%m-%d}"
+  },
+
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-full": "{capacity}% {icon}",
+    "format-charging": "{capacity}% ",
+    "format-plugged": "{capacity}% ",
+    "format-alt": "{time} {icon}",
+    "format-icons": ["", "", "", "", ""]
+  },
+
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "",
+      "performance": "",
+      "balanced": "",
+      "power-saver": ""
+    }
+  },
+
+  "network": {
+    "format-wifi": "{essid} ",
+    "format-ethernet": "{ipaddr}/{cidr} ",
+    "tooltip-format": "{essid} ({signalStrength}%) ",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "Disconnected ⚠"
+  }
+}
